@@ -22,7 +22,7 @@ namespace Resume_Summary.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Resume_Summary.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Resume_Summary.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Resume_Summary.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Resume_Summary.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Data Source=candidates.db.
         /// </summary>
-        internal static string CandidateDataSource {
+        public static string CandidateDataSource {
             get {
                 return ResourceManager.GetString("CandidateDataSource", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Resume_Summary.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Data Source=resumes.db.
         /// </summary>
-        internal static string ResumesDataSource {
+        public static string ResumesDataSource {
             get {
                 return ResourceManager.GetString("ResumesDataSource", resourceCulture);
             }
