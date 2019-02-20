@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Resume_Summary.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Resume_Summary.Controllers
 {
@@ -20,13 +21,16 @@ namespace Resume_Summary.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Candidate>> Get()
         {
-            return _candidateContext.Candidates;
+            return _candidateContext.Candidates.Include(c => c.Resumes).ToList();
         }
 
         [HttpGet("{id}")]
         public ActionResult<Candidate> Get(int id)
         {
-            return _candidateContext.Find<Candidate>(id);
+            return _candidateContext.Candidates
+                .Where(c => c.CandidateId == id)
+                .Include(c => c.Resumes)
+                .FirstOrDefault();
         }
 
         [HttpPost]

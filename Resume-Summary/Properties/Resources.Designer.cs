@@ -77,5 +77,14 @@ namespace Resume_Summary.Properties {
                 return ResourceManager.GetString("ResumesDataSource", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to D:\TessData.
+        /// </summary>
+        public static string TesseractData {
+            get {
+                return ResourceManager.GetString("TesseractData", resourceCulture);
+            }
+        }
     }
 }

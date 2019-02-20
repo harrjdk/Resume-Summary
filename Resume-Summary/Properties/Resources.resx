@@ -125,4 +125,8 @@
     <value>Data Source=resumes.db</value>
     <comment>The SQLite Data source string for resumes</comment>
   </data>
+  <data name="TesseractData" xml:space="preserve">
+    <value>D:\TessData</value>
+    <comment>Location of the Terreract Date File</comment>
+  </data>
 </root>

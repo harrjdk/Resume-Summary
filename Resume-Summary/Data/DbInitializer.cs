@@ -14,11 +14,16 @@ namespace Resume_Summary.Data
 
             if (candidateContext.Candidates.Any())
             {
-                return;
+                candidateContext.RemoveRange(candidateContext.Candidates);
+                candidateContext.RemoveRange(candidateContext.Resumes);
             }
 
-            Candidate candidate = new Candidate { FirstName = "John", LastName = "Doe", YearsExperience = 0, City = "Atlanta", State = "GA" };
+            Resume resume = new Resume { FirstName = "John", LastName = "Doe", ResumeText="Test Job" };
+
+            Candidate candidate = new Candidate { FirstName = "John", LastName = "Doe", YearsExperience = 0, City = "Atlanta", State = "GA", Resumes = new List<Resume>() };
             candidateContext.Add<Candidate>(candidate);
+            candidateContext.SaveChanges();
+            candidate.Resumes.Add(resume);
             candidateContext.SaveChanges();
         }
     }

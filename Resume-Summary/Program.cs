@@ -24,8 +24,8 @@ namespace Resume_Summary
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<CandidateContext>();
-                    DbInitializer.Initialize(context);
+                    var candidateContext = services.GetRequiredService<CandidateContext>();
+                    DbInitializer.Initialize(candidateContext);
                 }
                 catch (Exception e)
                 {
